@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Mondrian Project</title>
+		<style>
+			/*
+      This code is part of a CSS exercise in the Udemy course: The Complete 2024 Web Development Bootcamp by Dr. Angela Yu */
+
+			body {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				height: 100vh;
+				padding: 0;
+				margin: 0;
+			}
+
+			.painting {
+				display: grid;
+				grid-template-rows: 414px 132px 155px 20px;
+				grid-template-columns: 320px 198px 153px 50px;
+				gap: 9px;
+				width: 748px;
+				height: 748px;
+				background-color: #000;
+				padding: 0;
+				margin-bottom: 10px;
+				transition: 500ms cubic-bezier(0.075, 0.92, 0.165, 1);
+			}
+
+			.painting > div {
+				padding: 0;
+				margin: 0;
+			}
+
+			.red {
+				background-color: #e72f24;
+				grid-area: 1 / 1 / 2 / 2;
+			}
+
+			.painting:has(.red:hover) {
+				grid-template-rows: 589px 62px 50px 20px;
+				grid-template-columns: 543px 78px 50px 50px;
+				transition: grid-template-columns 400ms
+						cubic-bezier(0.075, 0.42, 0.065, 1),
+					grid-template-rows 600ms 400ms cubic-bezier(0.75, 0, 0, 1.5);
+			}
+
+			.white {
+				background-color: #f0f1ec;
+			}
+
+			.one {
+				grid-area: 1 / 2 / 1 / 5;
+			}
+
+			.two {
+				grid-area: 2 / 1 / 4 / 2;
+			}
+
+			.three {
+				grid-area: 2 / 2 / 4 / 4;
+			}
+			.blue {
+				background-color: #004592;
+				border-bottom: 10px #000 solid;
+				grid-area: 2 / 4 / 3 / 5;
+			}
+
+			.painting:has(.blue:hover) {
+				grid-template-rows: 64px 532px 105px 20px;
+				grid-template-columns: 260px 100px 100px 261px;
+				transition: grid-template-columns 1400ms 700ms
+						cubic-bezier(0.075, 0.42, 0.065, 1),
+					grid-template-rows 700ms cubic-bezier(0.75, 0, 0, 1.5);
+			}
+
+			.four {
+				grid-area: 3 / 4 / 5 / 5;
+			}
+
+			.yellow {
+				background-color: #f9d01e;
+			}
+
+			.painting:has(.yellow:hover) {
+				grid-template-rows: 20px 30px 20px 651px;
+				grid-template-columns: 20px 631px 50px 20px;
+				transition: grid-template-columns 1400ms cubic-bezier(1, 0.7, 0, 1),
+					grid-template-rows 2000ms 1400ms cubic-bezier(1, 0.7, 0, 1);
+			}
+
+			.black {
+				background-color: #232629;
+			}
+
+			footer {
+				text-align: center;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="painting">
+			<div class="red"></div>
+			<div class="white one"></div>
+			<div class="white two"></div>
+			<div class="white three"></div>
+			<div class="blue"></div>
+			<div class="white four"></div>
+			<div class="white five"></div>
+			<div class="yellow"></div>
+			<div class="black"></div>
+			<div class="six"></div>
+		</div>
+		<footer>
+			<p>
+				&copy; Painting by <a href=""></a> Piet Mondriaan. Coded with ❤️ by R.
+				Sabajo
+			</p>
+		</footer>
+	</body>
+</html>
